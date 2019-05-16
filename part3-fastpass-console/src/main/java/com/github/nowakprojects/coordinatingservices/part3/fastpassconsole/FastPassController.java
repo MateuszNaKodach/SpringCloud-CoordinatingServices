@@ -1,12 +1,14 @@
 package com.github.nowakprojects.coordinatingservices.part3.fastpassconsole;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 
+@RibbonClient("part3-fastpass-service")
 @Controller
 public class FastPassController {
 

@@ -27,7 +27,7 @@ public class FastPassController {
 
     @RequestMapping(path="/fastpass", params={"fastpassid"})
     public FastPassCustomer getFastPassById(@RequestParam String fastpassid) {
-
+        System.out.println("Getting fastpass by fastpassid " + fastpassid);
         Predicate<FastPassCustomer> p = c-> c.getFastPassId().equals(fastpassid);
         FastPassCustomer customer = customerlist.stream().filter(p).findFirst().get();
 
