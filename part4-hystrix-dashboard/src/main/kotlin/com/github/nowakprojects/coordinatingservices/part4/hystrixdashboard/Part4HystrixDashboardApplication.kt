@@ -5,7 +5,7 @@ import org.springframework.boot.runApplication
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard
 import org.springframework.cloud.netflix.turbine.EnableTurbine
 
-@EnableTurbine
+//@EnableTurbine
 @EnableHystrixDashboard
 @SpringBootApplication
 class Part4HystrixDashboardApplication
