@@ -19,7 +19,7 @@ public class DashboardController {
     @HystrixCommand(fallbackMethod = "getTollRateBackup")
     @RequestMapping("/dashboard")
     public String getTollRate(@RequestParam int stationId, Model m) {
-        TollRate tr = restTemplate.getForObject("http://part3-tool-service/tollrate/" + stationId, TollRate.class);
+        TollRate tr = restTemplate.getForObject("http://part3-toll-service/tollrate/" + stationId, TollRate.class);
         System.out.println("stationId: " + stationId);
         m.addAttribute("rate", tr.getCurrentRate());
         return "dashboard";
